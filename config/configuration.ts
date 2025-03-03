@@ -48,7 +48,7 @@ export default (): {
 } => ({
   app: {
     port: +(process.env.PORT || 8181),
-    serviceName: process.env.SERVICE_NAME || 'Admin_BE',
+    serviceName: process.env.SERVICE_NAME || 'Security_Monitor_BE',
     heapLimit:
       (process.env.HEAP_LIMIT &&
         Number.isFinite(Number(process.env.HEAP_LIMIT)) &&
@@ -93,7 +93,7 @@ export default (): {
   },
   db: {
     uri: process.env.MONGO_DSN || 'mongodb://localhost:27017/log4u',
-    appName: process.env.SERVICE_NAME || 'Admin_BE',
+    appName: process.env.SERVICE_NAME || 'Security_Monitor_BE',
     // useNewUrlParser: true,
     retryAttempts: 0,
     autoIndex: true,
