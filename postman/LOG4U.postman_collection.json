@@ -1,0 +1,4670 @@
+{
+	"info": {
+		"_postman_id": "02068386-ed83-4b69-9a2a-5ddc7b043a26",
+		"name": "LOG4U",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10622264"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "Get Person",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/person/:personId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"person",
+								":personId"
+							],
+							"variable": [
+								{
+									"key": "personId",
+									"value": "657a30288f17f0f65c7c88fe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Persons Settings",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isAppInDebugMode\": false,\r\n    \"useGoogleMaps\": true,\r\n    \"locationOptions\": {\r\n      \"accuracy\": 6,\r\n      \"distanceInterval\": 50,\r\n      \"foregroundService\": {\r\n        \"notificationColor\": \"#ff00ff\"\r\n      }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/person/:personId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"person",
+								":personId"
+							],
+							"variable": [
+								{
+									"key": "personId",
+									"value": "64dcb747db730feec83a7a8c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Owner",
+			"item": [
+				{
+					"name": "List Owners",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/owner?limit=30&offset=0&orderby=fullName&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"owner"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "fullName",
+									"description": "'fullName', 'birthDate', 'citizenship', 'languagePriority', 'hiredBy', 'hireDate', 'snn', 'company', 'insurancePolicy', 'insurancePolicyExp', 'address', 'phone', 'phone2', 'email', 'emergencyContactName', 'emergencyContactRel', 'emergencyContactPhone','appLogin'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Ivo",
+									"disabled": true
+								},
+								{
+									"key": "citizenship",
+									"value": "USA",
+									"disabled": true
+								},
+								{
+									"key": "languagePriority",
+									"value": "EN",
+									"description": "'EN', 'UA', 'ES', 'RU'",
+									"disabled": true
+								},
+								{
+									"key": "hiredBy",
+									"value": "Zibrov",
+									"disabled": true
+								},
+								{
+									"key": "snn",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "company",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "insurancePolicy",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactName",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactRel",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactPhone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "appLogin",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "7731",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Owner",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/owner/:ownerId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"owner",
+								":ownerId"
+							],
+							"variable": [
+								{
+									"key": "ownerId",
+									"value": "6505cd91c8506650905f4544"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Ivo Bobul\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/owner",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"owner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Owner",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Ivo Bobul\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/owner/:ownerId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"owner",
+								":ownerId"
+							],
+							"variable": [
+								{
+									"key": "ownerId",
+									"value": "64bfe15af53ba92b31063acc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Owner",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/owner/:ownerId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"owner",
+								":ownerId"
+							],
+							"variable": [
+								{
+									"key": "ownerId",
+									"value": "64bee343e50d281f7d7a4596"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Owner-Driver",
+			"item": [
+				{
+					"name": "List Owner-Drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/ownerDriver?limit=30&offset=0&orderby=fullName&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"ownerDriver"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "fullName",
+									"description": "'fullName','birthDate','citizenship','languagePriority','driverLicenceNumber','driverLicenceState','driverLicenceExp','idDocId','idDocType','idDocExp','hiredBy','hireDate','snn','company','insurancePolicy','insurancePolicyExp','address','phone','phone2','email','emergencyContactName','emergencyContactRel','emergencyContactPhone','appLogin'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Ivo",
+									"disabled": true
+								},
+								{
+									"key": "citizenship",
+									"value": "USA",
+									"disabled": true
+								},
+								{
+									"key": "languagePriority",
+									"value": "EN",
+									"description": "'EN', 'UA', 'ES', 'RU'",
+									"disabled": true
+								},
+								{
+									"key": "driverLicenceNumber",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "driverLicenceState",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "idDocId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "idDocType",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "hiredBy",
+									"value": "Zibrov",
+									"disabled": true
+								},
+								{
+									"key": "snn",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "company",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "insurancePolicy",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactName",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactRel",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactPhone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "appLogin",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "651d219d53b771a645c703c9",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Owner-Driver",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/ownerDriver/:ownerDriverId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"ownerDriver",
+								":ownerDriverId"
+							],
+							"variable": [
+								{
+									"key": "ownerDriverId",
+									"value": "6505cd91c8506650905f4544"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Owner-Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Ivo Bobul 2\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"driverLicenceNumber\":\"1313666\",\r\n    \"driverLicenceState\":\"Active\",\r\n    \"driverLicenceExp\":\"2014-06-24T20:34:02.047Z\",\r\n    \"idDocId\":\"O3459876\",\r\n    \"idDocType\":\"Passport\",\r\n    \"idDocExp\":\"2201-01-14T10:23:52.147Z\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/ownerDriver",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"ownerDriver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Owner-Driver",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Ivo Bobul\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"driverLicenceNumber\":\"1313666\",\r\n    \"driverLicenceState\":\"Active\",\r\n    \"driverLicenceExp\":\"2014-06-24T20:34:02.047Z\",\r\n    \"idDocId\":\"O3459876\",\r\n    \"idDocType\":\"Passport\",\r\n    \"idDocExp\":\"2201-01-14T10:23:52.147Z\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/ownerDriver/:ownerDriverId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"ownerDriver",
+								":ownerDriverId"
+							],
+							"variable": [
+								{
+									"key": "ownerDriverId",
+									"value": "64db8acc241114370218306d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Owner-Driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/ownerDriver/:ownerDriverId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"ownerDriver",
+								":ownerDriverId"
+							],
+							"variable": [
+								{
+									"key": "ownerDriverId",
+									"value": "64db8acc241114370218306d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coordinator",
+			"item": [
+				{
+					"name": "List Coordinators",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/coordinator?limit=30&offset=0&orderby=fullName&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinator"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "fullName",
+									"description": "'fullName', 'birthDate', 'citizenship', 'languagePriority', 'hiredBy', 'hireDate', 'snn', 'company', 'insurancePolicy', 'insurancePolicyExp', 'address', 'phone', 'phone2', 'email', 'emergencyContactName', 'emergencyContactRel', 'emergencyContactPhone'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Ivo",
+									"disabled": true
+								},
+								{
+									"key": "citizenship",
+									"value": "USA",
+									"disabled": true
+								},
+								{
+									"key": "languagePriority",
+									"value": "EN",
+									"description": "'EN', 'UA', 'ES', 'RU'",
+									"disabled": true
+								},
+								{
+									"key": "hiredBy",
+									"value": "Zibrov",
+									"disabled": true
+								},
+								{
+									"key": "snn",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "company",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "insurancePolicy",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactName",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactRel",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactPhone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "7731",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "64df6e1400fadfbb981a5f66",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Coordinator",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinator/:coordinatorId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinator",
+								":coordinatorId"
+							],
+							"variable": [
+								{
+									"key": "coordinatorId",
+									"value": "6505e7d4187ddabdc941e8e5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coordinator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Stepan Giga 2\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"owner\":\"6505cd91c8506650905f4544\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinator",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coordinator",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Stepan Giga\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"owner\":\"64dcb747db730feec83a7a8c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinator/:coordinatorId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinator",
+								":coordinatorId"
+							],
+							"variable": [
+								{
+									"key": "coordinatorId",
+									"value": "64dcb7d4db730feec83a7aa3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coordinator",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinator/:coordinatorId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinator",
+								":coordinatorId"
+							],
+							"variable": [
+								{
+									"key": "coordinatorId",
+									"value": "64da90d391934a748bb574f0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coordinator-Driver",
+			"item": [
+				{
+					"name": "List Coordinators-Drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/coordinatorDriver?limit=30&offset=0&orderby=fullName&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinatorDriver"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "fullName",
+									"description": "'fullName', 'birthDate', 'citizenship', 'languagePriority', 'driverLicenceNumber', 'driverLicenceState', 'driverLicenceExp', 'idDocId', 'idDocType', 'idDocExp', 'hiredBy', 'hireDate', 'snn', 'company', 'insurancePolicy', 'insurancePolicyExp', 'address', 'phone', 'phone2', 'email', 'emergencyContactName', 'emergencyContactRel', 'emergencyContactPhone', 'appLogin'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Ivo",
+									"disabled": true
+								},
+								{
+									"key": "citizenship",
+									"value": "USA",
+									"disabled": true
+								},
+								{
+									"key": "languagePriority",
+									"value": "EN",
+									"description": "'EN', 'UA', 'ES', 'RU'",
+									"disabled": true
+								},
+								{
+									"key": "driverLicenceNumber",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "driverLicenceState",
+									"value": "InActive",
+									"disabled": true
+								},
+								{
+									"key": "idDocId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "idDocType",
+									"value": "Passport",
+									"disabled": true
+								},
+								{
+									"key": "hiredBy",
+									"value": "Zibrov",
+									"disabled": true
+								},
+								{
+									"key": "snn",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "company",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "insurancePolicy",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactName",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactRel",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactPhone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "appLogin",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "7731",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "6505cd91c8506650905f4544",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Coordinator-Driver",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinatorDriver/:coordinatorId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinatorDriver",
+								":coordinatorId"
+							],
+							"variable": [
+								{
+									"key": "coordinatorId",
+									"value": "6505e7d4187ddabdc941e8e5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coordinator-Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Stepan Giga 10\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"driverLicenceNumber\":\"1313666\",\r\n    \"driverLicenceState\":\"Active\",\r\n    \"driverLicenceExp\":\"2014-06-24T20:34:02.047Z\",\r\n    \"idDocId\":\"O3459876\",\r\n    \"idDocType\":\"Passport\",\r\n    \"idDocExp\":\"2201-01-14T10:23:52.147Z\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\",\r\n    \"owner\":\"6505cd91c8506650905f4544\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinatorDriver",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinatorDriver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coordinator-Driver",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Stepan Giga 10\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"EN\",\r\n    \"driverLicenceNumber\":\"1313666\",\r\n    \"driverLicenceState\":\"Active\",\r\n    \"driverLicenceExp\":\"2014-06-24T20:34:02.047Z\",\r\n    \"idDocId\":\"O3459876\",\r\n    \"idDocType\":\"Passport\",\r\n    \"idDocExp\":\"2201-01-14T10:23:52.147Z\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",\r\n    \"snn\":\"6661313\",\r\n    \"company\":\"Horns&Hufs\",\r\n    \"insurancePolicy\":\"SomeData\",\r\n    \"insurancePolicyExp\":\"2024-07-24T20:33:52.147Z\",\r\n    \"address\":\"Pupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\",\r\n    \"owner\":\"6505cd91c8506650905f4544\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinatorDriver/:coordinatorId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinatorDriver",
+								":coordinatorId"
+							],
+							"variable": [
+								{
+									"key": "coordinatorId",
+									"value": "6505e7d4187ddabdc941e8e5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coordinator-Driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/coordinatorDriver/:coordinatorId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"coordinatorDriver",
+								":coordinatorId"
+							],
+							"variable": [
+								{
+									"key": "coordinatorId",
+									"value": "6505eace187ddabdc941e9fa"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "List Drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/driver?limit=30&offset=0&orderby=fullName&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"driver"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "fullName",
+									"description": "'fullName', 'birthDate', 'citizenship', 'languagePriority', 'languagePriority', 'driverLicenceNumber', 'driverLicenceState', 'driverLicenceExp', 'idDocId', 'idDocType', 'idDocExp', 'hiredBy', 'hireDate', 'address', 'phone', 'phone2', 'email', 'emergencyContactName', 'emergencyContactRel', 'emergencyContactPhone', 'appLogin'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Ivo",
+									"disabled": true
+								},
+								{
+									"key": "citizenship",
+									"value": "USA",
+									"disabled": true
+								},
+								{
+									"key": "languagePriority",
+									"value": "EN",
+									"description": "'EN', 'UA', 'ES', 'RU'",
+									"disabled": true
+								},
+								{
+									"key": "driverLicenceNumber",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "driverLicenceState",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "idDocId",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "idDocType",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "hiredBy",
+									"value": "Zibrov",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "allPhone",
+									"value": "+1 2323 32323",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactName",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactRel",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "emergencyContactPhone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "appLogin",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "7731",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "64df6e1400fadfbb981a5f66",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Driver",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/driver/:driverId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"driver",
+								":driverId"
+							],
+							"variable": [
+								{
+									"key": "driverId",
+									"value": "6505e7d4187ddabdc941e8e5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Oleksandr Pipa 2\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"ES\",\r\n    \"driverLicenceNumber\":\"1313666\",\r\n    \"driverLicenceState\":\"Active\",\r\n    \"driverLicenceExp\":\"2014-06-24T20:34:02.047Z\",\r\n    \"idDocId\":\"O3459876\",\r\n    \"idDocType\":\"Passport\",\r\n    \"idDocExp\":\"2201-01-14T10:23:52.147Z\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",    \r\n    \"address\":\"Dupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"a.pipa@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\",\r\n    \"owner\":\"6505cd91c8506650905f4544\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/driver",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Driver",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Oleksandr Pipa\",\r\n    \"birthDate\":\"2001-07-24T20:33:52.147Z\",\r\n    \"citizenship\":\"USA\",\r\n    \"languagePriority\":\"ES\",\r\n    \"driverLicenceNumber\":\"1313666\",\r\n    \"driverLicenceState\":\"Active\",\r\n    \"driverLicenceExp\":\"2014-06-24T20:34:02.047Z\",\r\n    \"idDocId\":\"O3459876\",\r\n    \"idDocType\":\"Passport\",\r\n    \"idDocExp\":\"2201-01-14T10:23:52.147Z\",\r\n    \"hiredBy\":\"Pavlo Zibrov\",\r\n    \"hireDate\":\"2020-07-24T20:33:52.147Z\",    \r\n    \"address\":\"Dupkina, 25-a, 6\",\r\n    \"phone\":\"0989809898\",\r\n    \"phone2\":\"0565605656\",\r\n    \"email\":\"a.pipa@gmail.com\",\r\n    \"emergencyContactName\":\"Maryna\",\r\n    \"emergencyContactRel\": \"Lubov moja edyna\",\r\n    \"emergencyContactPhone\":\"0666606666\",\r\n    \"notes\":\"Bla bla bla\",\r\n    \"appLogin\":\"MegoMan\",\r\n    \"appPass\":\"SecretPass\",\r\n    \"owner\":\"64d69a409e4807b416b85556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/driver/:driverId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"driver",
+								":driverId"
+							],
+							"variable": [
+								{
+									"key": "driverId",
+									"value": "64da958cbc26bc49bb10c092"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/driver/:driverId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"driver",
+								":driverId"
+							],
+							"variable": [
+								{
+									"key": "driverId",
+									"value": "64c92cec160c692399a5f78c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Truck",
+			"item": [
+				{
+					"name": "List Trucks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/truck",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "orderby",
+									"value": "truckNumber",
+									"description": "'truckNumber','status','crossborder','certificate','type','payload','grossWeight','make','model','year','color','vinCode','licencePlate'",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "7731",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Not Available",
+									"description": "Available, Not Available, Will be available, On route",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Available",
+									"description": "Available, Not Available, Will be available, On route",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Will be available",
+									"description": "Available, Not Available, Will be available, On route",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "On route",
+									"description": "Available, Not Available, Will be available, On route",
+									"disabled": true
+								},
+								{
+									"key": "crossborder",
+									"value": "Yes",
+									"description": "'Yes', 'No'",
+									"disabled": true
+								},
+								{
+									"key": "certificate",
+									"value": "Hazmat",
+									"description": "'Hazmat', 'Tsa', 'TWIC', 'Tanker Endorsement'",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "Box truck",
+									"description": "'Cargo van', 'Reefer van', 'Box truck', 'Box truck Reefer', 'Straight truck', 'Hotshot', 'Tented box'",
+									"disabled": true
+								},
+								{
+									"key": "equipment",
+									"value": "Lift gate",
+									"description": "'Dock height risers', 'Air ride', 'Lift gate', 'Keep from freezing', 'ICC bar', 'Vertical E-track', 'Horizontal E-track', 'Pallet jack', 'PPE', 'Ramps', 'Straps', 'Loads bars', 'Blankets', 'Pads', 'Fire extinguisher', 'Metal hooks', 'Reefer', 'Heater'",
+									"disabled": true
+								},
+								{
+									"key": "payload",
+									"value": "100500",
+									"disabled": true
+								},
+								{
+									"key": "make",
+									"value": "des",
+									"disabled": true
+								},
+								{
+									"key": "model",
+									"value": "inter",
+									"disabled": true
+								},
+								{
+									"key": "color",
+									"value": "Ye",
+									"disabled": true
+								},
+								{
+									"key": "vinCode",
+									"value": "vf",
+									"disabled": true
+								},
+								{
+									"key": "licencePlate",
+									"value": "76",
+									"disabled": true
+								},
+								{
+									"key": "lastLocation",
+									"value": "33.14594,-117.31785",
+									"description": "Latitude, Longitude",
+									"disabled": true
+								},
+								{
+									"key": "distance",
+									"value": "3963",
+									"description": "miles",
+									"disabled": true
+								},
+								{
+									"key": "availableBefore",
+									"value": "2024-07-24T20:33:52.147Z",
+									"disabled": true
+								},
+								{
+									"key": "availableAfter",
+									"value": "2024-07-24T20:33:52.147Z",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Trucks For Map",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/truck/forMap",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck",
+								"forMap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Truck",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/truck/:truckId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck",
+								":truckId"
+							],
+							"variable": [
+								{
+									"key": "truckId",
+									"value": "6505ce41c8506650905f455a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Truck",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"truckNumber\":\"2446\",\r\n    \"status\":\"Available\",\r\n    \"lastLocation\":[50.824229, 29.221783],\r\n    \"crossborder\":\"Yes\",\r\n    \"certificate\":\"Hazmat\",\r\n    \"type\":\"Box truck\",\r\n    \"equipment\":[\r\n        \"Dock height risers\",\r\n        \"Air ride\",\r\n        \"Lift gate\",\r\n        \"Keep from freezing\",\r\n        \"ICC bar\",\r\n        \"Vertical E-track\",\r\n        \"Horizontal E-track\",\r\n        \"Pallet jack\",\r\n        \"PPE\",\r\n        \"Ramps\",\r\n        \"Straps\",\r\n        \"Loads bars\",\r\n        \"Blankets\",\r\n        \"Pads\",\r\n        \"Fire extinguisher\"\r\n    ],\r\n    \"payload\":100500,\r\n    \"grossWeight\":\"150 ton\",\r\n    \"make\":\"Mercedes\",\r\n    \"model\":\"Sprinter\",\r\n    \"year\":1967,\r\n    \"color\":\"Yello\",\r\n    \"vinCode\":\"vf938749843\",\r\n    \"licencePlate\":\"AA7676BK\",\r\n    \"insideDims\":\"100 x 200\",\r\n    \"doorDims\":\"20 x 20\",\r\n    \"owner\":\"6505cd91c8506650905f4544\",\r\n    \"coordinator\":\"6505e7d4187ddabdc941e8e5\",\r\n    \"driver\":\"6505e7d4187ddabdc941e8e5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/truck",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Truck",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"truckNumber\":\"7731\",\r\n    \"status\":\"Will be available\",\r\n    \"lastLocation\":[33.0219,-117.2735],\r\n    \"availabilityLocation\":[38.97704,-77.03195],\r\n    \"availabilityAtLocal\":\"2024-07-24T20:33:52.147Z\",\r\n    \"crossborder\":\"Yes\",\r\n    \"certificate\":\"Hazmat\",\r\n    \"type\":\"Box truck\",\r\n    \"equipment\":[\r\n        \"Dock height risers\",\r\n        \"Air ride\",\r\n        \"Lift gate\",\r\n        \"Keep from freezing\",\r\n        \"ICC bar\",\r\n        \"Vertical E-track\",\r\n        \"Horizontal E-track\",\r\n        \"Pallet jack\",\r\n        \"PPE\",\r\n        \"Ramps\",\r\n        \"Straps\",\r\n        \"Loads bars\",\r\n        \"Blankets\",\r\n        \"Pads\",\r\n        \"Fire extinguisher\"\r\n    ],\r\n    \"payload\":100500,\r\n    \"grossWeight\":\"150 ton\",\r\n    \"make\":\"Mercedes\",\r\n    \"model\":\"Sprinter\",\r\n    \"year\":1967,\r\n    \"color\":\"Yello\",\r\n    \"vinCode\":\"vf938749843\",\r\n    \"licencePlate\":\"AA7676BK\",\r\n    \"insideDims\":\"100 x 200\",\r\n    \"doorDims\":\"20 x 20\",\r\n    \"owner\":\"64dcb842db730feec83a7ac5\",\r\n    \"coordinator\":\"64dcc026f4a06e8814ae8894\",\r\n    \"driver\":\"64dcb747db730feec83a7a8c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/truck/:truckId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck",
+								":truckId"
+							],
+							"variable": [
+								{
+									"key": "truckId",
+									"value": "64f0e49d5c57ad86d6d62ec8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Truck",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"reservedAt\": \"2024-07-24T20:33:52.147Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/truck/:truckId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck",
+								":truckId"
+							],
+							"variable": [
+								{
+									"key": "truckId",
+									"value": "64f0e49d5c57ad86d6d62ec8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Truck",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/truck/:truckId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"truck",
+								":truckId"
+							],
+							"variable": [
+								{
+									"key": "truckId",
+									"value": "64c977a2c068c72a3d5b4240"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Load",
+			"item": [
+				{
+					"name": "List Loads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/load?limit=30&offset=0&orderby=loadNumber&direction=desc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"load"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "loadNumber",
+									"description": "'loadNumber','status','pickDate','deliverDate','weight','rate','bookedByCompany','checkInAs'"
+								},
+								{
+									"key": "direction",
+									"value": "desc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "ref",
+									"value": "test",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Available",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Planned",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "In Progress",
+									"description": "'Available',  'Planned',  'In Progress',  'TONU',  'Cancelled',  'Completed'",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "TONU",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Cancelled",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Completed",
+									"disabled": true
+								},
+								{
+									"key": "loadNumber",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "weight",
+									"value": "100",
+									"disabled": true
+								},
+								{
+									"key": "truckType",
+									"value": "Hotshot",
+									"disabled": true
+								},
+								{
+									"key": "rate",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "bookedByCompany",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "checkInAs",
+									"value": "MegoCorp",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "122266661313",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Load",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/load/:loadId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"load",
+								":loadId"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "66fa978a87729085e2489fa8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Load",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ref\":[\"firstRef\",\"secondRef\",\"thirdRef\"],\r\n    \"status\":\"Available\",\r\n    \"stops\":[{\r\n       \"type\":\"PickUp\",\r\n       \"facility\": \"6650abdd91ec5b7d47736f0e\",\r\n       \"timeFrame\":{\r\n         \"type\":\"FCFS\",\r\n         \"from\":\"2001-07-25T20:33:52.147Z\",\r\n         \"to\":\"2001-07-27T20:33:52.147Z\"\r\n       },\r\n       \"freightList\":[{\r\n         \"freightId\": \"66fa978a87729085e2489faa\",\r\n         \"pieces\":3,\r\n         \"unitOfWeight\":\"KG\",\r\n         \"weight\":100500,\r\n         \"unitOfLength\":\"M\",\r\n         \"length\":13\r\n       },{\r\n         \"freightId\": \"66fa978a87729085e2489fab\",\r\n         \"pieces\":1,\r\n         \"unitOfWeight\":\"TON\",\r\n         \"weight\":104,\r\n         \"unitOfLength\":\"CM\",\r\n         \"length\":378\r\n       }],\r\n       \"addInfo\":\"Some info\"\r\n    },{\r\n      \"type\":\"Delivery\",\r\n      \"facility\":\"6650abea91ec5b7d47736f11\",\r\n      \"timeFrame\":{\r\n         \"type\":\"Direct\",\r\n         \"at\":\"2002-07-25T20:33:52.147Z\"\r\n       },\r\n       \"bolList\": [\r\n        \"66fa978a87729085e2489faa\",\r\n        \"66fa978a87729085e2489fab\"\r\n       ],\r\n       \"addInfo\":\"Some other info\"       \r\n    }],\r\n    \"weight\":\"100 ton\",\r\n    \"truckType\":[\r\n        \"Cargo van\",\r\n        \"Reefer van\",\r\n        \"Box truck\",\r\n        \"Box truck Reefer\",\r\n        \"Straight truck\",\r\n        \"Hotshot\",\r\n        \"Tented box\"\r\n    ],\r\n    \"rate\":3.56,\r\n    \"totalCharges\":5.34,\r\n    \"currency\":\"HUY\",\r\n    \"bookedByUser\":\"64d254f5139acc9c42bf63bb\",\r\n    \"bookedByCompany\":\"Horns & Hoofs\",\r\n    \"assignTo\":[\"64d254fc139acc9c42bf63bf\",\"64d254fd139acc9c42bf63c1\"],\r\n    \"checkInAs\":\"MegoCorp\",\r\n    \"truck\":\"64d28a394be7ed067d17b845\",\r\n    \"bookedWith\":\"66367b84a7d923452894b871\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/load",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Load",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ref\":[\"firstRef\",\"secondRef\",\"thirdRef\"],\r\n    \"status\":\"Available\",\r\n    \"stops\":[{\r\n       \"stopId\": \"66f701c555f40dfbec31cf96\",\r\n       \"type\":\"PickUp\",\r\n       \"driversInfo\": [\r\n         {\r\n           \"pieces\":2,\r\n           \"unitOfWeight\":\"KG\",\r\n           \"weight\": 468,\r\n           \"bol\":\"66f701c555f40dfbec31cf97\",\r\n           \"seal\":\"kukuseal\",\r\n           \"addressIsCorrect\":true\r\n         },\r\n         {\r\n           \"pieces\":2,\r\n           \"unitOfWeight\":\"KG\",\r\n           \"weight\": 468,\r\n           \"bol\":\"66f701c555f40dfbec31cf98\",\r\n           \"seal\":\"kukuseal\",\r\n           \"addressIsCorrect\":true\r\n         }\r\n       ],\r\n       \"status\": \"Completed\",\r\n       \"facility\": \"6650abdd91ec5b7d47736f0e\",\r\n       \"timeFrame\":{\r\n         \"type\":\"FCFS\",\r\n         \"from\":\"2001-07-25T20:33:52.147Z\",\r\n         \"to\":\"2001-07-27T20:33:52.147Z\"\r\n       },\r\n       \"freightList\":[{\r\n         \"freightId\": \"66f701c555f40dfbec31cf97\",\r\n         \"pieces\":3,\r\n         \"unitOfWeight\":\"KG\",\r\n         \"weight\":100500,\r\n         \"unitOfLength\":\"M\",\r\n         \"length\":13\r\n       },{\r\n         \"freightId\": \"66f701c555f40dfbec31cf98\",\r\n         \"pieces\":1,\r\n         \"unitOfWeight\":\"TON\",\r\n         \"weight\":104,\r\n         \"unitOfLength\":\"CM\",\r\n         \"length\":378\r\n       }],\r\n       \"addInfo\":\"Some info\"\r\n    },{\r\n       \"stopId\": \"66f701c555f40dfbec31cf99\",\r\n       \"type\":\"PickUp\",\r\n       \"status\": \"On route to PU\",\r\n       \"driversInfo\": [{\r\n         \"pieces\":2,\r\n         \"unitOfWeight\":\"KG\",\r\n         \"weight\": 468,\r\n         \"bol\":\"66f701c555f40dfbec31cf9b\",\r\n         \"seal\":\"kukuseal\",\r\n         \"addressIsCorrect\":true\r\n       }],\r\n       \"facility\": \"6650abdd91ec5b7d47736f0e\",\r\n       \"timeFrame\":{\r\n         \"type\":\"FCFS\",\r\n         \"from\":\"2001-07-25T20:33:52.147Z\",\r\n         \"to\":\"2001-07-27T20:33:52.147Z\"\r\n       },\r\n       \"freightList\":[{\r\n         \"freightId\": \"66f701c555f40dfbec31cf9b\",\r\n         \"pieces\":3,\r\n         \"unitOfWeight\":\"KG\",\r\n         \"weight\":100500,\r\n         \"unitOfLength\":\"M\",\r\n         \"length\":13\r\n       },{\r\n         \"freightId\": \"66f701c555f40dfbec31cf9c\",\r\n         \"pieces\":1,\r\n         \"unitOfWeight\":\"TON\",\r\n         \"weight\":104,\r\n         \"unitOfLength\":\"CM\",\r\n         \"length\":378\r\n       }],\r\n       \"addInfo\":\"Some info\"\r\n    },{\r\n      \"stopId\": \"66f701c555f40dfbec31cf9d\",  \r\n      \"type\":\"Delivery\",\r\n      \"driversInfo\": [\r\n        {\r\n          \"bol\":\"66f701c555f40dfbec31cf9b\",\r\n          \"signedBy\":\"Vasya Pupkin\"\r\n        },\r\n        {\r\n          \"bol\":\"66f701c555f40dfbec31cf9c\",\r\n          \"signedBy\":\"Vasya Dupkin\"\r\n        }\r\n      ],\r\n      \"status\": \"New\",\r\n      \"facility\":\"6650abea91ec5b7d47736f11\",\r\n      \"timeFrame\":{\r\n         \"type\":\"Direct\",\r\n         \"at\":\"2002-07-25T20:33:52.147Z\"\r\n       },\r\n       \"bolList\": [\r\n        \"66f701c555f40dfbec31cf9b\",\r\n        \"66f701c555f40dfbec31cf9c\"\r\n       ],\r\n       \"addInfo\":\"Some other info\"\r\n    }],\r\n    \"weight\":\"100 ton\",\r\n    \"truckType\":[\r\n        \"Cargo van\",\r\n        \"Reefer van\",\r\n        \"Box truck\",\r\n        \"Box truck Reefer\",\r\n        \"Straight truck\",\r\n        \"Hotshot\",\r\n        \"Tented box\"\r\n    ],\r\n    \"rate\":3.56,\r\n    \"totalCharges\":5.34,\r\n    \"currency\":\"HUY\",\r\n    \"bookedByUser\":\"64d254f5139acc9c42bf63bb\",\r\n    \"bookedByCompany\":\"Horns & Hoofs\",\r\n    \"assignTo\":[\"64d254fc139acc9c42bf63bf\",\"64d254fd139acc9c42bf63c1\"],\r\n    \"checkInAs\":\"MegoCorp\",\r\n    \"truck\":\"64d28a394be7ed067d17b845\",\r\n    \"bookedWith\":\"66367b84a7d923452894b871\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/load/:loadId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"load",
+								":loadId"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "66d96a39b4949a1e824fbdb6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Load",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/load/:loadId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"load",
+								":loadId"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "64d0067e4cce3fc793e8fb28"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/user/auth",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/user?limit=30&offset=0&orderby=fullName&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "fullName",
+									"description": "'fullName', 'phone', 'userRole', 'jobTitle', 'email'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "fullName",
+									"value": "Ivo",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "userRole",
+									"value": "",
+									"description": "'Admin', 'Super Admin'",
+									"disabled": true
+								},
+								{
+									"key": "jobTitle",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/user/:userId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "64c134d3abbd4c97d2a391d6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Ivo Bobul\",\r\n    \"phone\":\"0989809898\",\r\n    \"userRole\":\"Super Admin\",\r\n    \"jobTitle\":\"Director\",\r\n    \"email\":\"ivo.bobul11@gmail.com\",\r\n    \"password\":\"SuperPass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/user",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Ivo Bobul\",\r\n    \"phone\":\"0989809898\",\r\n    \"userRole\":\"Super Admin\",\r\n    \"jobTitle\":\"Director\",\r\n    \"email\":\"ivo.bobul@gmail.com\",\r\n    \"password\":\"f87365a987c89\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/user/:userId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "64c1343eabbd4c97d2a391d0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/user/:userId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "64d76fec1adf9d4fd287ae0e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "List Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/location?limit=30&offset=0&orderby=name&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"location"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "name",
+									"description": "'zipCode',  'name',  'stateCode',  'stateName'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "Accokeek MD",
+									"description": "Searches over name, zipCode and stateName fields",
+									"disabled": true
+								},
+								{
+									"key": "searchState",
+									"value": "Maryland",
+									"description": "i.e. MD or Maryland",
+									"disabled": true
+								},
+								{
+									"key": "zipCode",
+									"value": "03142",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "New York",
+									"disabled": true
+								},
+								{
+									"key": "stateCode",
+									"value": "380",
+									"disabled": true
+								},
+								{
+									"key": "stateName",
+									"value": "Ukraine",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "50.45466,30.5238",
+									"description": "Latitude, Longitude",
+									"disabled": true
+								},
+								{
+									"key": "distance",
+									"value": "100",
+									"description": "miles",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/location/:locationId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"location",
+								":locationId"
+							],
+							"variable": [
+								{
+									"key": "locationId",
+									"value": "64c1380eabbd4c97d2a391eb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zipCode\":\"03142\",\r\n    \"name\":\"Kyiv\",\r\n    \"stateCode\":\"380\",\r\n    \"stateName\":\"Ukraine\",\r\n    \"location\":[50.45466,30.5238]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/location",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"zipCode\":\"03142\",\r\n    \"name\":\"Kyiv\",\r\n    \"stateCode\":\"380\",\r\n    \"stateName\":\"Ukraine\",\r\n    \"location\": [57, 76]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/location/:locationId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"location",
+								":locationId"
+							],
+							"variable": [
+								{
+									"key": "locationId",
+									"value": "64c38c91de5fbc877c5428ea"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/location/:locationId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"location",
+								":locationId"
+							],
+							"variable": [
+								{
+									"key": "locationId",
+									"value": "64c1380eabbd4c97d2a391eb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import from file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "locations",
+									"type": "file",
+									"src": "/C:/Users/andrii.vasyliev/Downloads/georef-united-states-of-america-zc-point@public.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{origin}}/api/location/fromCsv",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"location",
+								"fromCsv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "List Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/customer?limit=30&offset=0&orderby=name&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "name",
+									"description": "'name', 'customerRole', 'address', 'city', 'state', 'zipCode', 'phone', 'email'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "hoofs",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Horns and Hoofs",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "FREIGHT FORWARDER INTERNATIONAL",
+									"description": "'BROKER DOMESTIC', 'BROKER INTERNATIONAL', 'FREIGHT FORWARDER DOMESTIC', 'FREIGHT FORWARDER INTERNATIONAL', 'SHIPPER/CONSIGNEE DOMESTIC', 'SHIPPER/CONSIGNEE INTERNATIONAL', 'OTHER'",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "address2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "zipCode",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "fax",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "website",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/customer/:customerId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "66367b9ba7d923452894b87d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Horns and Hoofs\",\r\n    \"type\":\"FREIGHT FORWARDER INTERNATIONAL\",\r\n    \"address\":\"Some address here\",\r\n    \"address2\":\"Optional address\",\r\n    \"city\":\"New York\",\r\n    \"state\":\"Alaska\",\r\n    \"zipCode\":\"03142\",\r\n    \"phone\":\"0989809898\",\r\n    \"fax\":\"0676767676\",\r\n    \"email\":\"director@domain.com\",\r\n    \"website\":\"https://bla_bla.hub.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/customer",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Horns and Hoofs\",\r\n    \"type\":\"FREIGHT FORWARDER INTERNATIONAL\",\r\n    \"address\":\"Some address here\",\r\n    \"address2\":\"Optional address\",\r\n    \"city\":\"New York\",\r\n    \"state\":\"Alaska\",\r\n    \"zipCode\":\"03142\",\r\n    \"phone\":\"0989809898\",\r\n    \"fax\":\"0676767676\",\r\n    \"email\":\"director@domain.com\",\r\n    \"website\":\"https://bla_bla.hub.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/customer/:customerId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "66367b9ba7d923452894b87d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/customer/:customerId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"customer",
+								":customerId"
+							],
+							"variable": [
+								{
+									"key": "customerId",
+									"value": "66367b9ba7d923452894b87d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facility",
+			"item": [
+				{
+					"name": "List Facilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/facility?limit=30&offset=0&orderby=name&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"facility"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "name",
+									"description": "'name'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "search",
+									"value": "ware",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "warehouse",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "address2",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "facilityLocation",
+									"value": "50.45466,30.5238",
+									"description": "Latitude, Longitude",
+									"disabled": true
+								},
+								{
+									"key": "distance",
+									"value": "100",
+									"description": "miles",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Facility",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/facility/:facilityId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"facility",
+								":facilityId"
+							],
+							"variable": [
+								{
+									"key": "facilityId",
+									"value": "66365650d546fb96617a5e51"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Facility",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"warehouse 3\",\r\n    \"address\":\"Some address here\",\r\n    \"address2\":\"bla-bla-bla\",\r\n    \"facilityLocation\":[50.45484,30.5263]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/facility",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"facility"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Facility",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"warehouse 33\",\r\n    \"address\":\"Some address here\",\r\n    \"address2\":\"bla-bla-bla\",\r\n    \"facilityLocation\":[50.45484,30.5263]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/facility/:facilityId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"facility",
+								":facilityId"
+							],
+							"variable": [
+								{
+									"key": "facilityId",
+									"value": "66365650d546fb96617a5e51"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Facility",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/facility/:facilityId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"facility",
+								":facilityId"
+							],
+							"variable": [
+								{
+									"key": "facilityId",
+									"value": "66365650d546fb96617a5e51"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "List Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/file?limit=30&offset=0&linkedTo=657e25869e04394b3780079c&fileOf=Person",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"file"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "createdAt",
+									"description": "'filename', 'createdAt'",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc",
+									"disabled": true
+								},
+								{
+									"key": "linkedTo",
+									"value": "657e25869e04394b3780079c"
+								},
+								{
+									"key": "fileOf",
+									"value": "Person"
+								},
+								{
+									"key": "filename",
+									"value": "IMG_20160920_073614.jpg",
+									"disabled": true
+								},
+								{
+									"key": "comment",
+									"value": "Some comment here",
+									"disabled": true
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd24]",
+									"value": "StopPickUp",
+									"disabled": true
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd28]",
+									"value": "StopDelivery",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get File",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/file/:fileId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"file",
+								":fileId"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "669fca4364ba7a91289f1661"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download File",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/file/:fileId/download",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"file",
+								":fileId",
+								"download"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "660c885b1dc66f093ba7c3db"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Andrey/Desktop/деталька/IMG_20160920_073614.jpg"
+								},
+								{
+									"key": "linkedTo",
+									"value": "657e25869e04394b3780079c",
+									"type": "text"
+								},
+								{
+									"key": "fileOf",
+									"value": "Person",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "Some comment here",
+									"type": "text"
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd24]",
+									"value": "StopPickUp",
+									"type": "text"
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd28]",
+									"value": "StopDelivery",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{origin}}/api/file",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete FIle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/file/:fileId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"file",
+								":fileId"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "660c7879a5f4bea629741218"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SendMail (For Service test only)",
+			"item": [
+				{
+					"name": "SendMail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"Fred Foo 👻<test@@4u-logistics.com>\",\r\n    \"to\": \"aa5856bk@gmail.com\",\r\n    \"subject\": \"Hello ✔\",\r\n    \"text\": \"Hello world? (plain)\",\r\n    \"html\": \"<b>Hello world? (html)</b>\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/email/send",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"email",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/email?limit=30&offset=0&orderby=state&direction=asc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"email"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "state",
+									"description": "'state', 'from', 'subject', 'createdAt', 'updatedAt'"
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "state",
+									"value": "",
+									"description": "'New',  'Ready',  'Processing',  'Sent',  'Error'",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "toType",
+									"value": "Ivo",
+									"description": "'User', 'Person'",
+									"disabled": true
+								},
+								{
+									"key": "subject",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/email/:emailId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"email",
+								":emailId"
+							],
+							"variable": [
+								{
+									"key": "emailId",
+									"value": "65d27a7e905cde79941119a7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"Fred Foo 👻<test@@4u-logistics.com>\",\r\n    \"to\": [\r\n        {\r\n            \"to\": \"64dcb747db730feec83a7a8c\",\r\n            \"toType\": \"Person\"\r\n        },\r\n        {\r\n            \"to\": \"650da9c408d55a210c24d820\",\r\n            \"toType\": \"User\"\r\n        }\r\n    ],\r\n    \"subject\": \"Hello11 ✔\",\r\n    \"text\": \"Hello world11? (plain)\",\r\n    \"html\": \"<b>Hello world11? (html)</b>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/email",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Email",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": \"Ready\",\r\n    \"from\": \"Fred Foo 👻<test@@4u-logistics.com>\",\r\n    \"subject\": \"Hello11 ✔\",\r\n    \"text\": \"Hello world11? (plain)\",\r\n    \"html\": \"<b>Hello world11? (html)</b>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/email/:emailId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"email",
+								":emailId"
+							],
+							"variable": [
+								{
+									"key": "emailId",
+									"value": "65d27a7e905cde79941119a7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Email",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/email/:emailId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"email",
+								":emailId"
+							],
+							"variable": [
+								{
+									"key": "emailId",
+									"value": "65d1e0a89292d8255b714719"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SendPush (For Service test only)",
+			"item": [
+				{
+					"name": "Send Push",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\": \"ExponentPushToken[UoviXpHv7buoiZnC2GWvbU]\",\r\n    \"sound\": \"default\",\r\n    \"title\": \"LOG4U\",\r\n    \"body\": \"Hello world\",\r\n    \"data\": {\"routeTo\": \"/home/loads\"},\r\n    \"badge\": 8,\r\n    \"_contentAvailable\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/push/send",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Receipt",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\": \"ExponentPushToken[_hcNcXNFTEX_d8a36vse1T]\",\r\n    \"sound\": \"default\",\r\n    \"title\": \"LOG4U\",\r\n    \"subtitle\": \"Yo\",\r\n    \"body\": \"Hello world\",\r\n    \"data\": {\"someData\": \"Yes\"},\r\n    \"badge\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/push/receipt/:receiptId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push",
+								"receipt",
+								":receiptId"
+							],
+							"variable": [
+								{
+									"key": "receiptId",
+									"value": "019188af-a4d4-7aa6-963f-d20b8c73c350"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Pushs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/push?limit=30&offset=0&orderby=createdAt&direction=desc",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "createdAt",
+									"description": "'state', 'from', 'subject', 'createdAt', 'updatedAt'"
+								},
+								{
+									"key": "direction",
+									"value": "desc",
+									"description": "asc or desc"
+								},
+								{
+									"key": "state",
+									"value": "New",
+									"description": "'New',  'Ready for send',  'Processing send',  'Sent for deliver',  'Error sending',  'Ready for receiving receipt',  'Processing receiving receipt',  'Sent to user',  'Error from receipt',  'Error receiving receipt'",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "subtitle",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "Pipa",
+									"disabled": true
+								},
+								{
+									"key": "truckNumber",
+									"value": "7731",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Push",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/push/:pushId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push",
+								":pushId"
+							],
+							"variable": [
+								{
+									"key": "pushId",
+									"value": "65f4c63662626b41e2e6434b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Push",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\": \"64dcb747db730feec83a7a8c\",\r\n    \"title\": \"LOG4U\",    \r\n    \"subtitle\": \"Hello ✔\",\r\n    \"body\": \"Hello world\",\r\n    \"data\": {\"еrouteTo\": \"/home/loads\"},\r\n    \"badge\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/push",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Push",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state\": \"Ready for send\",\r\n    \"title\": \"LOG4U\",    \r\n    \"subtitle\": \"Hello ✔\",\r\n    \"body\": \"Hello world\",\r\n    \"data\": {\"еrouteTo\": \"/home/loads\"},\r\n    \"badge\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/push/:pushId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push",
+								":pushId"
+							],
+							"variable": [
+								{
+									"key": "pushId",
+									"value": "66caeddf9a5169005d906dcf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Push",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/push/:pushId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"push",
+								":pushId"
+							],
+							"variable": [
+								{
+									"key": "pushId",
+									"value": "65f4c63662626b41e2e6434b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "Cron",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/job/cron",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"job",
+								"cron"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Interval",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/job/interval",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"job",
+								"interval"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Timeout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/api/job/timeout",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"job",
+								"timeout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mobile",
+			"item": [
+				{
+					"name": "Set Auth",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"force\": true,\r\n    \"deviceId\": \"mego_device\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/setAuth",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"setAuth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set App Data",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"ExponentPushToken[_hcNcXNFTEX_d8a36vse1T]\",\r\n    \"appPermissions\": {\r\n      \"Geo\": \"granted\",\r\n      \"Push\": \"granted\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/setAppData",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"setAppData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Driver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/driver",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Owner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/owner",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"owner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Coordinator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/coordinator",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"coordinator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Loads (Owner)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/loadsByOwner?limit=15&offset=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"loadsByOwner"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "15"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "loadNumber",
+									"description": "'loadNumber','pickDate','deliverDate','weight','rate','bookedByCompany','checkInAs'",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "desc",
+									"description": "asc or desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Loads (Coordinator)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/loadsByCoordinator?limit=15&offset=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"loadsByCoordinator"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "15"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "loadNumber",
+									"description": "'loadNumber','pickDate','deliverDate','weight','rate','bookedByCompany','checkInAs'",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "desc",
+									"description": "asc or desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Loads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/load?limit=15&offset=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"load"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "15"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "loadNumber",
+									"description": "'loadNumber','pickDate','deliverDate','weight','rate','bookedByCompany','checkInAs'",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "desc",
+									"description": "asc or desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Load Stop PickUp  status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"GTG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/load/:loadId/stopPickUp/:stopId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"load",
+								":loadId",
+								"stopPickUp",
+								":stopId"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "66e4ae94efadddc295215a50"
+								},
+								{
+									"key": "stopId",
+									"value": "66e4ae94efadddc295215a51"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Load Stop PickUp  DriversInfo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    //\"driversInfoId\": \"66f724fd099714180add9357\",\r\n    \"pieces\": 8,\r\n    \"unitOfWeight\": \"KG\",\r\n    \"weight\": 468,\r\n    \"bol\": \"66f701c555f40dfbec31cf97\",\r\n    \"seal\": \"pukuseal\",\r\n    \"addressIsCorrect\": true\r\n  },\r\n  {\r\n    //\"driversInfoId\": \"66f724fd099714180add9358\",\r\n    \"pieces\": 4,\r\n    \"unitOfWeight\": \"KG\",\r\n    \"weight\": 468,\r\n    \"bol\": \"66f701c555f40dfbec31cf98\",\r\n    \"seal\": \"kakuseal\",\r\n    \"addressIsCorrect\": true\r\n  }\r\n ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/load/:loadId/stopPickUp/:stopId/driversInfo",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"load",
+								":loadId",
+								"stopPickUp",
+								":stopId",
+								"driversInfo"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "66e5ce8f751c3069d1833705"
+								},
+								{
+									"key": "stopId",
+									"value": "66effec9204feee40523c8b5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Load Stop Delivery status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"Completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/load/:loadId/stopDelivery/:stopId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"load",
+								":loadId",
+								"stopDelivery",
+								":stopId"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "66e4ae94efadddc295215a50"
+								},
+								{
+									"key": "stopId",
+									"value": "66e4ae94efadddc295215a52"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Load Stop Delivery DriversInfo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    //\"driversInfoId\": \"66f724fd099714180add9360\",\r\n    \"bol\": \"66f701c555f40dfbec31cf9b\",\r\n    \"signedBy\": \"Vasya Chupkin\"\r\n  },\r\n  {\r\n    //\"driversInfoId\": \"66f724fd099714180add9361\",\r\n    \"bol\": \"66f701c555f40dfbec31cf9c\",\r\n    \"signedBy\": \"Vasya Fupkin\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/load/:loadId/stopDelivery/:stopId/driversInfo",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"load",
+								":loadId",
+								"stopDelivery",
+								":stopId",
+								"driversInfo"
+							],
+							"variable": [
+								{
+									"key": "loadId",
+									"value": "66da13f92eddde118b2fdf46"
+								},
+								{
+									"key": "stopId",
+									"value": "66da13f92eddde118b2fdf48"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Truck Status (For Driver and Owner)",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Will be available\",\r\n    \"availabilityLocation\":[38.97704,-77.03195],\r\n    \"availabilityAtLocal\":\"2024-07-24T20:33:52.147Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/truck/:truckId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"truck",
+								":truckId"
+							],
+							"variable": [
+								{
+									"key": "truckId",
+									"value": "651c73bf30377698b0990335"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Truck Location",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"deviceId\": \"mego_device\",\r\n   \"location\": {\r\n        \"coords\": {\r\n        \"latitude\": 50.4615774,\r\n        \"longitude\":30.3391369\r\n      }\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/setTruckLocation",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"setTruckLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/mobileApp/file?limit=30&offset=0&linkedTo=657e25869e04394b3780079c&fileOf=Person",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"file"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderby",
+									"value": "createdAt",
+									"description": "'filename', 'createdAt'",
+									"disabled": true
+								},
+								{
+									"key": "direction",
+									"value": "asc",
+									"description": "asc or desc",
+									"disabled": true
+								},
+								{
+									"key": "linkedTo",
+									"value": "657e25869e04394b3780079c"
+								},
+								{
+									"key": "fileOf",
+									"value": "Person"
+								},
+								{
+									"key": "filename",
+									"value": "IMG_20160920_073614.jpg",
+									"disabled": true
+								},
+								{
+									"key": "comment",
+									"value": "Some comment here",
+									"disabled": true
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd24]",
+									"value": "StopPickUp",
+									"disabled": true
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd28]",
+									"value": "StopDelivery",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get File",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/file/:fileId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"file",
+								":fileId"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "6612cb0e49188f67c6dac9ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download File",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/file/:fileId/download",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"file",
+								":fileId",
+								"download"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "6612cb0e49188f67c6dac9ce"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Andrey/Desktop/деталька/IMG_20160920_073614.jpg"
+								},
+								{
+									"key": "linkedTo",
+									"value": "657e25869e04394b3780079c",
+									"type": "text"
+								},
+								{
+									"key": "fileOf",
+									"value": "Person",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "Some comment here",
+									"type": "text"
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd24]",
+									"value": "StopPickUp",
+									"type": "text"
+								},
+								{
+									"key": "tags[6615a1feb6d857c56844cd28]",
+									"value": "StopDelivery",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/file",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete FIle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/mobileApp/file/:fileId",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"mobileApp",
+								"file",
+								":fileId"
+							],
+							"variable": [
+								{
+									"key": "fileId",
+									"value": "6612cb0e49188f67c6dac9ce"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "{{mobile_password}}",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{mobile_username}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Get Status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/status",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Health",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/health",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Readiness",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/readiness",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"readiness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Liveness",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/liveness",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"liveness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metrics",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/metrics",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "origin",
+			"value": "https://admin-test-lt5d.onrender.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "origin",
+			"value": "https://admin.4u-logistics.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "origin",
+			"value": "http://localhost:8181",
+			"type": "string"
+		},
+		{
+			"key": "username",
+			"value": "ivo.bobul@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "SuperPass",
+			"type": "string"
+		},
+		{
+			"key": "username",
+			"value": "4ulogisticsllc@gmail.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "mobile_username",
+			"value": "AlexSS",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "mobile_password",
+			"value": "AlexSS",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "mobile_username",
+			"value": "MegoMan",
+			"type": "string"
+		},
+		{
+			"key": "mobile_password",
+			"value": "superpass",
+			"type": "string"
+		}
+	]
+}

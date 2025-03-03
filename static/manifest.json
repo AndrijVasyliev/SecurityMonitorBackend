@@ -1,0 +1,30 @@
+{
+  "short_name": "LOG4U",
+  "name": "LOG4U Admin Interface",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "4U_Red.png",
+      "type": "image/png",
+      "sizes": "388x248"
+    },
+    {
+      "src": "4U_White.png",
+      "type": "image/png",
+      "sizes": "388x248"
+    },
+    {
+      "src": "4U_Logistics.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
